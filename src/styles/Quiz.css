@@ -1,0 +1,27 @@
+.quiz {
+    text-align: center;
+}
+
+.timer {
+    margin-bottom: 20px;
+}
+
+.time-bar {
+    width: 100%;
+    background-color: #d7ccc8;
+    height: 20px;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 10px;
+}
+
+.time-left {
+    height: 100%;
+    background-color: #a1887f;
+    transition: width 0.1s linear;
+}
+
+.score-section {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
