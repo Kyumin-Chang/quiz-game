@@ -39,6 +39,7 @@ const Quiz: React.FC = () => {
 
     useEffect(() => {
         if (timeLeft <= 0) {
+            setUserAnswers((prevAnswers) => [...prevAnswers, '']);
             handleNextQuestion();
             return;
         }
