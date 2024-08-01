@@ -32,10 +32,6 @@ dist-ssr
 *.sln
 *.sw?
 
-# Lock files
-package-lock.json
-yarn.lock
-
 # Build output
 build/
 

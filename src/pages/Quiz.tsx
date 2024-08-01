@@ -64,33 +64,32 @@ const Quiz: React.FC = () => {
     };
 
     return (
-        <div className="quiz">
+        <div className="quiz container">
             {isQuizFinished ? (
-                <div className="score-section container">
-                    최종 스코어 : {questions.length}문제 중에서 {score}문제를 맞췄습니다!
-                    <button onClick={handleShowModal}>해설 보기</button>
-                    <button onClick={handleBackToMain}>메인 페이지로 돌아가기</button>
+                <div className="score-section text-center">
+                    <h2 className="mb-4">최종 스코어 : {questions.length} 문제 중에서 {score}문제를 맞췄습니다!</h2>
+                    <button className="btn" onClick={handleShowModal}>해설 보기</button>
+                    <button className="btn" onClick={handleBackToMain}>메인 페이지로 돌아가기</button>
                     <Modal isOpen={showModal} onClose={handleCloseModal}>
                         <h2>해설</h2>
-                        <ul>
+                        <ul className="list-group">
                             {questions.map((question, index) => (
-                                <li key={index}>
+                                <li key={index} className="list-group-item">
                                     <p>문제 {index + 1}: {question.questionText}</p>
                                     <p>내 답: {userAnswers[index]}</p>
                                     <p>정답: {question.answerOptions.find(option => option.isCorrect)?.answerText}</p>
                                 </li>
                             ))}
                         </ul>
-                        <button className="modal-close-button" onClick={handleCloseModal}>닫기</button>
                     </Modal>
                 </div>
             ) : (
                 <>
-                    <div className="timer container">
-                        <div className="time-bar">
+                    <div className="timer">
+                        <div className="time-bar mb-3">
                             <div className="time-left" style={{ width: `${(timeLeft / 5) * 100}%` }}></div>
                         </div>
-                        남은 시간: {timeLeft.toFixed(1)}초
+                        <h5>남은 시간: {timeLeft.toFixed(1)}초</h5>
                     </div>
                     <div className="container">
                         <Question

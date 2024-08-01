@@ -21,17 +21,6 @@
     position: relative;
     text-align: center;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    color: #333;
-}
-
-.close-button {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    background: none;
-    border: none;
-    font-size: 16px;
-    cursor: pointer;
 }
 
 .modal-close-button {
@@ -43,8 +32,5 @@
     border-radius: 20px;
     background-color: #b5a27f;
     color: white;
-}
-
-.modal-close-button:hover {
-    background-color: #9f8b6e;
+    transition: background-color 0.3s ease;
 }

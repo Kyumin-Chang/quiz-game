@@ -8,9 +8,9 @@ const Home: React.FC = () => {
     return (
         <div className="container main-page">
             <h1 className="title">퀴즈 게임</h1>
-            <div className="button-group">
-                <button onClick={() => navigate('/quiz')}>게임 시작</button>
-                <button onClick={() => navigate('/admin-login')}>관리자 페이지</button>
+            <div>
+                <button className="btn" onClick={() => navigate('/quiz')}>게임 시작</button>
+                <button className="btn" onClick={() => navigate('/admin-login')}>관리자 페이지</button>
             </div>
         </div>
     );

@@ -14,7 +14,7 @@ const Question: React.FC<QuestionProps> = ({ question, handleAnswerOptionClick }
             <div className="question-text">{question.questionText}</div>
             <div className="answer-section">
                 {question.answerOptions.map((answerOption, index) => (
-                    <button key={index} onClick={() => handleAnswerOptionClick(answerOption.isCorrect, answerOption.answerText)}>
+                    <button className="btn btn-secondary" key={index} onClick={() => handleAnswerOptionClick(answerOption.isCorrect, answerOption.answerText)}>
                         {answerOption.answerText}
                     </button>
                 ))}
